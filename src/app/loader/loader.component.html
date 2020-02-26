@@ -1,0 +1,13 @@
+<div *ngIf="loadingOK"  class="overlay">
+  <span class="loader">
+    <span class="left">
+      <span class="anim"></span>
+    </span>
+    <span class="right">
+      <span class="anim"></span>
+    </span>
+  </span>
+</div>
+<div *ngIf="!showContent">
+  <button class="retry" (click)="callApi()">Retry</button>
+</div>
