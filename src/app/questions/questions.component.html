@@ -1,0 +1,14 @@
+<input class="search-box" type="text" [(ngModel)]="searchText" placeholder="Search">
+<div>{{search}}</div>
+<div class="questions-list">
+    <div *ngFor="let question of questionsObj.source.value | filter : searchText">
+      <h2>{{question.question}}</h2>
+      <img [src]="question.image_url" width="300">
+      <p>published at: {{question.published_at}}</p>
+      <div *ngFor="let choice of question.choices" class="questions__choice">
+        <p>Choice: {{choice.choice}}</p>
+        <p>Votes: {{choice.votes}}</p>
+      </div>
+    </div>
+</div>
+<button (click)="loadMore()">Load More</button>

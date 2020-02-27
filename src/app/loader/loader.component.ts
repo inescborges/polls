@@ -22,12 +22,10 @@ export class LoaderComponent implements OnInit, OnDestroy {
   callApi() {
     this.http.get('https://private-anon-f4b8190d8a-blissrecruitmentapi.apiary-mock.com/health')
     .subscribe(data => {
-      console.log(data);
         if(data.hasOwnProperty('status')) {
           if(data['status'] === 'OK') {
             this.showContent = true;
           }
-          console.log(this.loadingOK)
         }
     });
   }

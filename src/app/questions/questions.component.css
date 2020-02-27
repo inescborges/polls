@@ -1,0 +1,5 @@
+.questions__choice {
+    max-width: 200px;
+    margin: 10px 0;
+    border: 2px solid black;
+}
